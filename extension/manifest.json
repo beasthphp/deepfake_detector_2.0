@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Local Deepfake Face Analyzer",
+  "version": "0.1.0",
+  "description": "Analyzes user-selected images and user-controlled visible webpage images with a local deepfake detector API.",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Deepfake Analyzer",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html"
+}

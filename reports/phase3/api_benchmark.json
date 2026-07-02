@@ -1,0 +1,728 @@
+{
+  "environment": {
+    "runtime": "Python 3.11.9",
+    "device": "CPU",
+    "model_version": "existing-cnn-93acc",
+    "detector": "opencv_haar_frontalface_default",
+    "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square"
+  },
+  "cold_start": {
+    "model_and_detector_load_ms": 10690.011,
+    "process_memory_before_mb": null,
+    "process_memory_after_mb": null,
+    "process_memory_delta_mb": null
+  },
+  "warmup": {
+    "filename": "one_clear_real.jpg",
+    "status_code": 200,
+    "client_wall_ms": 3002.9,
+    "response": {
+      "request_id": "b43356d3-7a9c-4778-8d4a-2fe1bd30ae18",
+      "status": "completed",
+      "image": {
+        "width": 256,
+        "height": 256,
+        "format": "JPEG"
+      },
+      "faces_detected": 1,
+      "faces": [
+        {
+          "face_index": 0,
+          "bounding_box": {
+            "x1": 45,
+            "y1": 54,
+            "x2": 215,
+            "y2": 224
+          },
+          "crop_box": {
+            "x1": 0,
+            "y1": 0,
+            "x2": 256,
+            "y2": 256
+          },
+          "face_detection_score": 0.951409,
+          "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+          "preserved_original": true,
+          "real_score": 0.5805773735046387,
+          "fake_score": 0.41942262649536133,
+          "label": "Uncertain"
+        }
+      ],
+      "timing_ms": {
+        "decode": 16.822,
+        "face_detection": 2609.463,
+        "crop_preprocessing": 0.202,
+        "classification": 367.627,
+        "serialization": 0.046,
+        "total": 2994.192
+      },
+      "warnings": [
+        "Results are probabilistic and are not proof of authenticity.",
+        "No-face or detector failures are never interpreted as Likely Real."
+      ]
+    }
+  },
+  "cases": {
+    "one_face": {
+      "filename": "one_clear_real.jpg",
+      "status_code": 200,
+      "client_wall_ms": 188.944,
+      "response": {
+        "request_id": "13239c5b-a9dc-4727-a49b-3487381dcb43",
+        "status": "completed",
+        "image": {
+          "width": 256,
+          "height": 256,
+          "format": "JPEG"
+        },
+        "faces_detected": 1,
+        "faces": [
+          {
+            "face_index": 0,
+            "bounding_box": {
+              "x1": 45,
+              "y1": 54,
+              "x2": 215,
+              "y2": 224
+            },
+            "crop_box": {
+              "x1": 0,
+              "y1": 0,
+              "x2": 256,
+              "y2": 256
+            },
+            "face_detection_score": 0.951409,
+            "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+            "preserved_original": true,
+            "real_score": 0.5805773735046387,
+            "fake_score": 0.41942262649536133,
+            "label": "Uncertain"
+          }
+        ],
+        "timing_ms": {
+          "decode": 0.744,
+          "face_detection": 22.566,
+          "crop_preprocessing": 0.134,
+          "classification": 160.412,
+          "serialization": 0.06,
+          "total": 183.949
+        },
+        "warnings": [
+          "Results are probabilistic and are not proof of authenticity.",
+          "No-face or detector failures are never interpreted as Likely Real."
+        ]
+      }
+    },
+    "multiple_faces": {
+      "filename": "multiple_faces_real_fake.jpg",
+      "status_code": 200,
+      "client_wall_ms": 347.947,
+      "response": {
+        "request_id": "0dacddf0-4d7d-4ed3-8d14-8c346ef1f006",
+        "status": "completed",
+        "image": {
+          "width": 560,
+          "height": 280,
+          "format": "JPEG"
+        },
+        "faces_detected": 2,
+        "faces": [
+          {
+            "face_index": 0,
+            "bounding_box": {
+              "x1": 69,
+              "y1": 77,
+              "x2": 215,
+              "y2": 223
+            },
+            "crop_box": {
+              "x1": 5,
+              "y1": 0,
+              "x2": 279,
+              "y2": 274
+            },
+            "face_detection_score": 0.952593,
+            "crop_strategy": "context_full_head_l40_r40_t70_b35_square",
+            "preserved_original": false,
+            "real_score": 0.9999536275863647,
+            "fake_score": 4.6372413635253906e-05,
+            "label": "Likely Real"
+          },
+          {
+            "face_index": 1,
+            "bounding_box": {
+              "x1": 349,
+              "y1": 84,
+              "x2": 489,
+              "y2": 224
+            },
+            "crop_box": {
+              "x1": 282,
+              "y1": 0,
+              "x2": 555,
+              "y2": 273
+            },
+            "face_detection_score": 0.936421,
+            "crop_strategy": "context_full_head_l40_r40_t70_b35_square",
+            "preserved_original": false,
+            "real_score": 0.9999989867210388,
+            "fake_score": 1.0132789611816406e-06,
+            "label": "Likely Real"
+          }
+        ],
+        "timing_ms": {
+          "decode": 1.838,
+          "face_detection": 44.261,
+          "crop_preprocessing": 0.732,
+          "classification": 294.626,
+          "serialization": 0.056,
+          "total": 341.547
+        },
+        "warnings": [
+          "Results are probabilistic and are not proof of authenticity.",
+          "No-face or detector failures are never interpreted as Likely Real."
+        ]
+      }
+    },
+    "no_face": {
+      "filename": "no_face_geometric.jpg",
+      "status_code": 200,
+      "client_wall_ms": 16.208,
+      "response": {
+        "request_id": "bac36013-d542-4375-8949-02c6269d7cf9",
+        "status": "no_face_detected",
+        "image": {
+          "width": 320,
+          "height": 240,
+          "format": "JPEG"
+        },
+        "faces_detected": 0,
+        "faces": [],
+        "timing_ms": {
+          "decode": 0.78,
+          "face_detection": 9.352,
+          "crop_preprocessing": 0.0,
+          "classification": 0.0,
+          "serialization": 0.0,
+          "total": 10.148
+        },
+        "warnings": [
+          "No supported human face was detected. The deepfake classifier was not run.",
+          "No-face results are never interpreted as Likely Real."
+        ]
+      }
+    }
+  },
+  "sequential_warm_requests": {
+    "count": 10,
+    "failed_count": 0,
+    "client_wall_ms_avg": 205.549,
+    "client_wall_ms_median": 205.183,
+    "client_wall_ms_min": 197.51,
+    "client_wall_ms_max": 215.503,
+    "response_total_ms_avg": 199.963,
+    "response_total_ms_median": 200.316,
+    "runs": [
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 200.239,
+        "response": {
+          "request_id": "6136b058-d30a-46cd-9118-3a9112c91d64",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 0.95,
+            "face_detection": 35.789,
+            "crop_preprocessing": 0.202,
+            "classification": 158.43,
+            "serialization": 0.048,
+            "total": 195.452
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 202.689,
+        "response": {
+          "request_id": "2631ffd4-eb0a-4b83-9938-3dee4cbb0d53",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 0.852,
+            "face_detection": 37.127,
+            "crop_preprocessing": 0.196,
+            "classification": 158.47,
+            "serialization": 0.033,
+            "total": 196.705
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 197.51,
+        "response": {
+          "request_id": "35e51c73-e7f0-4ea6-b97b-f11aa784fa8a",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 1.119,
+            "face_detection": 40.762,
+            "crop_preprocessing": 0.163,
+            "classification": 149.161,
+            "serialization": 0.033,
+            "total": 191.26
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 204.236,
+        "response": {
+          "request_id": "c3493863-ff4b-463d-a113-739a4e42d6e4",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 0.863,
+            "face_detection": 37.539,
+            "crop_preprocessing": 0.213,
+            "classification": 160.245,
+            "serialization": 0.029,
+            "total": 198.909
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 215.503,
+        "response": {
+          "request_id": "c7bf4e91-3342-44fd-b2ed-05f650197944",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 1.313,
+            "face_detection": 36.573,
+            "crop_preprocessing": 0.211,
+            "classification": 171.874,
+            "serialization": 0.04,
+            "total": 210.042
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 209.955,
+        "response": {
+          "request_id": "5c6bad85-0098-4332-9c96-e63fc4f13eb2",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 0.73,
+            "face_detection": 38.393,
+            "crop_preprocessing": 0.204,
+            "classification": 165.42,
+            "serialization": 0.044,
+            "total": 204.824
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 209.638,
+        "response": {
+          "request_id": "0e57c831-0acd-44de-a188-dd53d73b5bb3",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 1.323,
+            "face_detection": 36.721,
+            "crop_preprocessing": 0.201,
+            "classification": 164.833,
+            "serialization": 0.026,
+            "total": 203.126
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 206.129,
+        "response": {
+          "request_id": "be1d2369-2e41-46c0-80e7-13c7d75d6e07",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 0.917,
+            "face_detection": 35.491,
+            "crop_preprocessing": 0.151,
+            "classification": 165.118,
+            "serialization": 0.025,
+            "total": 201.723
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 198.266,
+        "response": {
+          "request_id": "04843e25-e398-470b-9623-0e94d267ceec",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 1.134,
+            "face_detection": 34.64,
+            "crop_preprocessing": 0.132,
+            "classification": 156.269,
+            "serialization": 0.024,
+            "total": 192.219
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      },
+      {
+        "filename": "one_clear_fake.jpg",
+        "status_code": 200,
+        "client_wall_ms": 211.33,
+        "response": {
+          "request_id": "d0b51068-d706-4783-b6fa-54b5abea9941",
+          "status": "completed",
+          "image": {
+            "width": 256,
+            "height": 256,
+            "format": "JPEG"
+          },
+          "faces_detected": 1,
+          "faces": [
+            {
+              "face_index": 0,
+              "bounding_box": {
+                "x1": 50,
+                "y1": 63,
+                "x2": 208,
+                "y2": 221
+              },
+              "crop_box": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 256,
+                "y2": 256
+              },
+              "face_detection_score": 0.903415,
+              "crop_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+              "preserved_original": true,
+              "real_score": 0.001902006915770471,
+              "fake_score": 0.9980979930842295,
+              "label": "Likely Fake"
+            }
+          ],
+          "timing_ms": {
+            "decode": 1.23,
+            "face_detection": 38.472,
+            "crop_preprocessing": 0.17,
+            "classification": 165.43,
+            "serialization": 0.042,
+            "total": 205.367
+          },
+          "warnings": [
+            "Results are probabilistic and are not proof of authenticity.",
+            "No-face or detector failures are never interpreted as Likely Real."
+          ]
+        }
+      }
+    ]
+  }
+}

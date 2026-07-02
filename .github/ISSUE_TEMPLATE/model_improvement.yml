@@ -1,0 +1,36 @@
+name: Model improvement
+description: Propose model, dataset, calibration, or evaluation work.
+title: "model: "
+labels: ["model", "research", "needs-triage"]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change and why?
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Dataset or evaluation impact
+      description: Include split strategy, external holdout, and leakage concerns.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will this be considered complete?
+    validations:
+      required: true
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Suggested milestone
+      options:
+        - 0.2.0 model replacement
+        - 0.3.0 deployment hardening
+        - research backlog
+    validations:
+      required: true

@@ -1,0 +1,49 @@
+{
+  "one_clear_real.jpg": {
+    "path": "D:\\ddp\\phase2_samples\\input\\one_clear_real.jpg",
+    "sources": [
+      "D:\\ddp\\data\\raw\\real_vs_fake\\real-vs-fake\\test\\real\\18233.jpg"
+    ]
+  },
+  "one_clear_fake.jpg": {
+    "path": "D:\\ddp\\phase2_samples\\input\\one_clear_fake.jpg",
+    "sources": [
+      "D:\\ddp\\data\\raw\\real_vs_fake\\real-vs-fake\\test\\fake\\GE645LYL3S.jpg"
+    ]
+  },
+  "already_cropped_256_real.jpg": {
+    "path": "D:\\ddp\\phase2_samples\\input\\already_cropped_256_real.jpg",
+    "sources": [
+      "D:\\ddp\\data\\raw\\real_vs_fake\\real-vs-fake\\test\\real\\54317.jpg"
+    ]
+  },
+  "multiple_faces_real_fake.jpg": {
+    "path": "D:\\ddp\\phase2_samples\\input\\multiple_faces_real_fake.jpg",
+    "sources": [
+      "D:\\ddp\\data\\raw\\real_vs_fake\\real-vs-fake\\test\\real\\18233.jpg",
+      "D:\\ddp\\data\\raw\\real_vs_fake\\real-vs-fake\\test\\fake\\GE645LYL3S.jpg"
+    ]
+  },
+  "no_face_geometric.jpg": {
+    "path": "D:\\ddp\\phase2_samples\\input\\no_face_geometric.jpg",
+    "sources": []
+  },
+  "small_face_real.jpg": {
+    "path": "D:\\ddp\\phase2_samples\\input\\small_face_real.jpg",
+    "sources": [
+      "D:\\ddp\\data\\raw\\real_vs_fake\\real-vs-fake\\test\\real\\18233.jpg"
+    ]
+  },
+  "edge_face_fake.jpg": {
+    "path": "D:\\ddp\\phase2_samples\\input\\edge_face_fake.jpg",
+    "sources": [
+      "D:\\ddp\\data\\raw\\real_vs_fake\\real-vs-fake\\test\\fake\\H0A3WZHOHH.jpg"
+    ]
+  },
+  "non_square_real.jpg": {
+    "path": "D:\\ddp\\phase2_samples\\input\\non_square_real.jpg",
+    "sources": [
+      "D:\\ddp\\data\\raw\\real_vs_fake\\real-vs-fake\\test\\real\\54317.jpg"
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "mode": "smoke",
+  "seed": 69,
+  "batch_size": 32,
+  "epochs_requested": 1,
+  "epochs_completed": 1,
+  "learning_rate": 0.001,
+  "augmentation_enabled": true,
+  "full_split_counts": {
+    "train": {
+      "fake": 50000,
+      "real": 50000
+    },
+    "valid": {
+      "fake": 10000,
+      "real": 10000
+    }
+  },
+  "used_split_counts": {
+    "train": {
+      "fake": 500,
+      "real": 500
+    },
+    "valid": {
+      "fake": 100,
+      "real": 100
+    }
+  },
+  "train_batch": {
+    "image_shape": [
+      32,
+      256,
+      256,
+      3
+    ],
+    "label_shape": [
+      32
+    ],
+    "label_distribution": {
+      "0": 12,
+      "1": 20
+    },
+    "image_dtype": "float32",
+    "image_min": 0.0,
+    "image_max": 1.0
+  },
+  "valid_batch": {
+    "image_shape": [
+      32,
+      256,
+      256,
+      3
+    ],
+    "label_shape": [
+      32
+    ],
+    "label_distribution": {
+      "0": 18,
+      "1": 14
+    },
+    "image_dtype": "float32",
+    "image_min": 0.0,
+    "image_max": 1.0
+  },
+  "train_image_validation": {
+    "checked": 1000,
+    "failed": 0
+  },
+  "valid_image_validation": {
+    "checked": 200,
+    "failed": 0
+  },
+  "checkpoint_path": "D:\\ddp\\models\\experiments\\retrained_custom_cnn_smoke_best.keras",
+  "history_csv": "D:\\ddp\\reports\\retrained_baseline\\training_history_smoke.csv",
+  "model_summary_file": "D:\\ddp\\reports\\retrained_baseline\\smoke_model_summary.txt",
+  "best_validation_epoch": 1,
+  "best_validation_auc": 0.6857000589370728,
+  "elapsed_seconds": 32.42764186859131,
+  "history": {
+    "accuracy": [
+      0.48399999737739563
+    ],
+    "auc": [
+      0.48080798983573914
+    ],
+    "loss": [
+      0.9352478981018066
+    ],
+    "precision": [
+      0.4793814420700073
+    ],
+    "recall": [
+      0.3720000088214874
+    ],
+    "val_accuracy": [
+      0.5699999928474426
+    ],
+    "val_auc": [
+      0.6857000589370728
+    ],
+    "val_loss": [
+      0.6906590461730957
+    ],
+    "val_precision": [
+      0.75
+    ],
+    "val_recall": [
+      0.20999999344348907
+    ],
+    "learning_rate": [
+      0.0010000000474974513
+    ]
+  }
+}

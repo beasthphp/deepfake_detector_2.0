@@ -1,0 +1,167 @@
+{
+  "threshold_real_score": 0.5,
+  "class_mapping": {
+    "fake": 0,
+    "real": 1
+  },
+  "model_output": "real_score = model output probability-like score for class 'real'",
+  "fake_score_formula": "fake_score = 1.0 - real_score",
+  "false_positive_definition": "a real face incorrectly labelled fake",
+  "false_negative_definition": "a fake face incorrectly labelled real",
+  "accuracy": 0.9397,
+  "balanced_accuracy": 0.9397,
+  "precision_fake": 0.9299823978095052,
+  "recall_fake": 0.951,
+  "f1_fake": 0.9403737763274993,
+  "support_fake": 10000,
+  "precision_real": 0.9498669940658891,
+  "recall_real": 0.9284,
+  "f1_real": 0.9390108222918985,
+  "support_real": 10000,
+  "roc_auc_fake_score": 0.9847198300000001,
+  "confusion_matrix_labels": [
+    "fake",
+    "real"
+  ],
+  "confusion_matrix": [
+    [
+      9510,
+      490
+    ],
+    [
+      716,
+      9284
+    ]
+  ],
+  "fake_correct_predicted_fake": 9510,
+  "fake_incorrect_predicted_real": 490,
+  "real_incorrect_predicted_fake": 716,
+  "real_correct_predicted_real": 9284,
+  "false_positive_rate": 0.0716,
+  "false_negative_rate": 0.049,
+  "model_inspection": {
+    "model_path": "D:\\ddp\\model\\deepfake_detector_93acc.h5",
+    "model_file_size_bytes": 178116384,
+    "tensorflow_version": "2.20.0",
+    "keras_version": "3.10.0",
+    "load_compile_requested": true,
+    "loaded_with_compile": true,
+    "load_warning": null,
+    "input_shape": [
+      null,
+      256,
+      256,
+      3
+    ],
+    "output_shape": [
+      null,
+      1
+    ],
+    "total_params": 14839105,
+    "trainable_params": 14839105,
+    "non_trainable_params": 0,
+    "output_activation": "sigmoid",
+    "optimizer": "Adam",
+    "loss": "binary_crossentropy",
+    "metrics": [
+      "compile_metrics",
+      "loss"
+    ],
+    "flatten_to_dense": {
+      "flatten_layer": "flatten",
+      "dense_layer": "dense",
+      "flatten_output_units": 115200,
+      "dense_units": 128,
+      "dense_kernel_params": 14745600,
+      "dense_bias_params": 128,
+      "dense_total_params": 14745728,
+      "float32_weight_bytes_without_optimizer": 58982912,
+      "approx_adam_weight_plus_slots_bytes": 176948736
+    },
+    "layers": [
+      {
+        "name": "conv2d",
+        "class_name": "Conv2D",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 896,
+        "activation": "relu"
+      },
+      {
+        "name": "max_pooling2d",
+        "class_name": "MaxPooling2D",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 0,
+        "activation": null
+      },
+      {
+        "name": "conv2d_1",
+        "class_name": "Conv2D",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 18496,
+        "activation": "relu"
+      },
+      {
+        "name": "max_pooling2d_1",
+        "class_name": "MaxPooling2D",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 0,
+        "activation": null
+      },
+      {
+        "name": "conv2d_2",
+        "class_name": "Conv2D",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 73856,
+        "activation": "relu"
+      },
+      {
+        "name": "max_pooling2d_2",
+        "class_name": "MaxPooling2D",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 0,
+        "activation": null
+      },
+      {
+        "name": "flatten",
+        "class_name": "Flatten",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 0,
+        "activation": null
+      },
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 14745728,
+        "activation": "relu"
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 0,
+        "activation": null
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "input_shape": null,
+        "output_shape": null,
+        "params": 129,
+        "activation": "sigmoid"
+      }
+    ]
+  },
+  "test_rows": 20000,
+  "claimed_accuracy_from_filename": "93acc",
+  "reproduction_status": "approximately reproduced"
+}

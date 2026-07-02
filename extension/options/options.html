@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deepfake Analyzer Options</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="options-page">
+      <h1>Deepfake Analyzer Options</h1>
+      <p class="notice">Use a local API endpoint. Do not configure a public HTTP detector for this prototype.</p>
+
+      <form id="optionsForm">
+        <label>
+          API base URL
+          <input id="apiBaseUrl" name="apiBaseUrl" type="url" required>
+        </label>
+
+        <label>
+          Request timeout, seconds
+          <input id="requestTimeoutSeconds" name="requestTimeoutSeconds" type="number" min="3" max="120" step="1">
+        </label>
+
+        <label class="checkbox">
+          <input id="autoOpenResults" name="autoOpenResults" type="checkbox">
+          Automatically open results after analysis starts
+        </label>
+
+        <label class="checkbox">
+          <input id="showModelScores" name="showModelScores" type="checkbox">
+          Show model scores
+        </label>
+
+        <label>
+          Recent history limit
+          <input id="historyLimit" name="historyLimit" type="number" min="1" max="25" step="1">
+        </label>
+
+        <label>
+          Minimum displayed width, px
+          <input id="minDisplayedWidth" name="minDisplayedWidth" type="number" min="32" max="4096" step="1">
+        </label>
+
+        <label>
+          Minimum displayed height, px
+          <input id="minDisplayedHeight" name="minDisplayedHeight" type="number" min="32" max="4096" step="1">
+        </label>
+
+        <label>
+          Minimum natural width, px
+          <input id="minNaturalWidth" name="minNaturalWidth" type="number" min="32" max="10000" step="1">
+        </label>
+
+        <label>
+          Minimum natural height, px
+          <input id="minNaturalHeight" name="minNaturalHeight" type="number" min="32" max="10000" step="1">
+        </label>
+
+        <label>
+          Visible scan margin, px
+          <input id="scanRootMarginPx" name="scanRootMarginPx" type="number" min="0" max="2000" step="1">
+        </label>
+
+        <label>
+          Concurrent image requests
+          <input id="scanRequestConcurrency" name="scanRequestConcurrency" type="number" min="1" max="6" step="1">
+        </label>
+
+        <label>
+          Scan queue limit
+          <input id="scanQueueLimit" name="scanQueueLimit" type="number" min="1" max="500" step="1">
+        </label>
+
+        <label>
+          Prediction cache limit
+          <input id="predictionCacheLimit" name="predictionCacheLimit" type="number" min="10" max="2000" step="1">
+        </label>
+
+        <label class="checkbox">
+          <input id="overlaysEnabled" name="overlaysEnabled" type="checkbox">
+          Show page overlays
+        </label>
+
+        <label class="checkbox">
+          <input id="diagnosticsEnabled" name="diagnosticsEnabled" type="checkbox">
+          Show development diagnostics
+        </label>
+
+        <label class="checkbox">
+          <input id="mockModeEnabled" name="mockModeEnabled" type="checkbox">
+          Enable mock API mode
+        </label>
+
+        <label>
+          Mock scenario
+          <select id="mockScenario" name="mockScenario">
+            <option value="likely_fake">Likely fake face</option>
+            <option value="likely_real">Likely real face</option>
+            <option value="uncertain">Uncertain face</option>
+            <option value="multiple_faces">Multiple faces</option>
+            <option value="no_face">No face</option>
+            <option value="timeout">Timeout</option>
+            <option value="malformed">Malformed response</option>
+            <option value="api_error">API error</option>
+          </select>
+        </label>
+
+        <label class="checkbox">
+          <input id="globalScanningStopped" name="globalScanningStopped" type="checkbox">
+          Global emergency stop
+        </label>
+
+        <div id="message" class="message" role="status"></div>
+
+        <div class="actions">
+          <button type="submit">Save options</button>
+          <button id="resetDefaults" type="button">Reset defaults</button>
+          <button id="clearPredictionCache" type="button">Clear prediction cache</button>
+        </div>
+      </form>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

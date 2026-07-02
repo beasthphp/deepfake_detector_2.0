@@ -1,0 +1,405 @@
+{
+  "samples_run": 8,
+  "results": [
+    {
+      "image": "already_cropped_256_real.jpg",
+      "faces_detected": 1,
+      "status": "ok",
+      "detector": "opencv_haar_frontalface_default",
+      "preprocessing": {
+        "color_mode": "RGB",
+        "resize": [
+          256,
+          256
+        ],
+        "interpolation": "nearest",
+        "dtype": "float32",
+        "normalization": "divide_by_255",
+        "channels": "last"
+      },
+      "thresholds": {
+        "likely_fake": "real_score < 0.40",
+        "uncertain": "0.40 <= real_score <= 0.60",
+        "likely_real": "real_score > 0.60",
+        "calibration_note": "provisional validation-derived ranges, not calibrated real-world confidence"
+      },
+      "detector_time_ms": 1872.775,
+      "average_classification_time_ms": 12349.642,
+      "faces": [
+        {
+          "face_index": 0,
+          "bounding_box": {
+            "x1": 47,
+            "y1": 62,
+            "x2": 200,
+            "y2": 215
+          },
+          "detection_confidence": 0.890968,
+          "image_width": 256,
+          "image_height": 256,
+          "crop_box": {
+            "x1": 16,
+            "y1": 32,
+            "x2": 230,
+            "y2": 246
+          },
+          "crop_width": 214,
+          "crop_height": 214,
+          "real_score": 0.999282,
+          "fake_score": 0.000718,
+          "label": "Likely Real",
+          "classification_time_ms": 12349.642
+        }
+      ],
+      "processing_time_ms": 14248.56
+    },
+    {
+      "image": "edge_face_fake.jpg",
+      "faces_detected": 1,
+      "status": "ok",
+      "detector": "opencv_haar_frontalface_default",
+      "preprocessing": {
+        "color_mode": "RGB",
+        "resize": [
+          256,
+          256
+        ],
+        "interpolation": "nearest",
+        "dtype": "float32",
+        "normalization": "divide_by_255",
+        "channels": "last"
+      },
+      "thresholds": {
+        "likely_fake": "real_score < 0.40",
+        "uncertain": "0.40 <= real_score <= 0.60",
+        "likely_real": "real_score > 0.60",
+        "calibration_note": "provisional validation-derived ranges, not calibrated real-world confidence"
+      },
+      "detector_time_ms": 29.622,
+      "average_classification_time_ms": 165.46,
+      "faces": [
+        {
+          "face_index": 0,
+          "bounding_box": {
+            "x1": 28,
+            "y1": 101,
+            "x2": 168,
+            "y2": 241
+          },
+          "detection_confidence": 0.936926,
+          "image_width": 320,
+          "image_height": 320,
+          "crop_box": {
+            "x1": 0,
+            "y1": 73,
+            "x2": 196,
+            "y2": 269
+          },
+          "crop_width": 196,
+          "crop_height": 196,
+          "real_score": 0.966611,
+          "fake_score": 0.033389,
+          "label": "Likely Real",
+          "classification_time_ms": 165.46
+        }
+      ],
+      "processing_time_ms": 200.069
+    },
+    {
+      "image": "multiple_faces_real_fake.jpg",
+      "faces_detected": 2,
+      "status": "ok",
+      "detector": "opencv_haar_frontalface_default",
+      "preprocessing": {
+        "color_mode": "RGB",
+        "resize": [
+          256,
+          256
+        ],
+        "interpolation": "nearest",
+        "dtype": "float32",
+        "normalization": "divide_by_255",
+        "channels": "last"
+      },
+      "thresholds": {
+        "likely_fake": "real_score < 0.40",
+        "uncertain": "0.40 <= real_score <= 0.60",
+        "likely_real": "real_score > 0.60",
+        "calibration_note": "provisional validation-derived ranges, not calibrated real-world confidence"
+      },
+      "detector_time_ms": 47.765,
+      "average_classification_time_ms": 163.202,
+      "faces": [
+        {
+          "face_index": 0,
+          "bounding_box": {
+            "x1": 69,
+            "y1": 77,
+            "x2": 215,
+            "y2": 223
+          },
+          "detection_confidence": 0.952593,
+          "image_width": 560,
+          "image_height": 280,
+          "crop_box": {
+            "x1": 40,
+            "y1": 48,
+            "x2": 244,
+            "y2": 252
+          },
+          "crop_width": 204,
+          "crop_height": 204,
+          "real_score": 0.950732,
+          "fake_score": 0.049268,
+          "label": "Likely Real",
+          "classification_time_ms": 164.121
+        },
+        {
+          "face_index": 1,
+          "bounding_box": {
+            "x1": 349,
+            "y1": 84,
+            "x2": 489,
+            "y2": 224
+          },
+          "detection_confidence": 0.936421,
+          "image_width": 560,
+          "image_height": 280,
+          "crop_box": {
+            "x1": 321,
+            "y1": 56,
+            "x2": 517,
+            "y2": 252
+          },
+          "crop_width": 196,
+          "crop_height": 196,
+          "real_score": 0.991652,
+          "fake_score": 0.008348,
+          "label": "Likely Real",
+          "classification_time_ms": 162.282
+        }
+      ],
+      "processing_time_ms": 383.482
+    },
+    {
+      "image": "no_face_geometric.jpg",
+      "faces_detected": 0,
+      "status": "no_face_detected",
+      "detector": "opencv_haar_frontalface_default",
+      "detector_time_ms": 8.394,
+      "processing_time_ms": 10.083
+    },
+    {
+      "image": "non_square_real.jpg",
+      "faces_detected": 1,
+      "status": "ok",
+      "detector": "opencv_haar_frontalface_default",
+      "preprocessing": {
+        "color_mode": "RGB",
+        "resize": [
+          256,
+          256
+        ],
+        "interpolation": "nearest",
+        "dtype": "float32",
+        "normalization": "divide_by_255",
+        "channels": "last"
+      },
+      "thresholds": {
+        "likely_fake": "real_score < 0.40",
+        "uncertain": "0.40 <= real_score <= 0.60",
+        "likely_real": "real_score > 0.60",
+        "calibration_note": "provisional validation-derived ranges, not calibrated real-world confidence"
+      },
+      "detector_time_ms": 28.385,
+      "average_classification_time_ms": 165.777,
+      "faces": [
+        {
+          "face_index": 0,
+          "bounding_box": {
+            "x1": 189,
+            "y1": 93,
+            "x2": 322,
+            "y2": 226
+          },
+          "detection_confidence": 0.92595,
+          "image_width": 520,
+          "image_height": 300,
+          "crop_box": {
+            "x1": 162,
+            "y1": 66,
+            "x2": 348,
+            "y2": 252
+          },
+          "crop_width": 186,
+          "crop_height": 186,
+          "real_score": 0.998977,
+          "fake_score": 0.001023,
+          "label": "Likely Real",
+          "classification_time_ms": 165.777
+        }
+      ],
+      "processing_time_ms": 199.062
+    },
+    {
+      "image": "one_clear_fake.jpg",
+      "faces_detected": 1,
+      "status": "ok",
+      "detector": "opencv_haar_frontalface_default",
+      "preprocessing": {
+        "color_mode": "RGB",
+        "resize": [
+          256,
+          256
+        ],
+        "interpolation": "nearest",
+        "dtype": "float32",
+        "normalization": "divide_by_255",
+        "channels": "last"
+      },
+      "thresholds": {
+        "likely_fake": "real_score < 0.40",
+        "uncertain": "0.40 <= real_score <= 0.60",
+        "likely_real": "real_score > 0.60",
+        "calibration_note": "provisional validation-derived ranges, not calibrated real-world confidence"
+      },
+      "detector_time_ms": 37.814,
+      "average_classification_time_ms": 169.924,
+      "faces": [
+        {
+          "face_index": 0,
+          "bounding_box": {
+            "x1": 50,
+            "y1": 63,
+            "x2": 208,
+            "y2": 221
+          },
+          "detection_confidence": 0.903415,
+          "image_width": 256,
+          "image_height": 256,
+          "crop_box": {
+            "x1": 18,
+            "y1": 32,
+            "x2": 239,
+            "y2": 253
+          },
+          "crop_width": 221,
+          "crop_height": 221,
+          "real_score": 0.995391,
+          "fake_score": 0.004609,
+          "label": "Likely Real",
+          "classification_time_ms": 169.924
+        }
+      ],
+      "processing_time_ms": 212.97
+    },
+    {
+      "image": "one_clear_real.jpg",
+      "faces_detected": 1,
+      "status": "ok",
+      "detector": "opencv_haar_frontalface_default",
+      "preprocessing": {
+        "color_mode": "RGB",
+        "resize": [
+          256,
+          256
+        ],
+        "interpolation": "nearest",
+        "dtype": "float32",
+        "normalization": "divide_by_255",
+        "channels": "last"
+      },
+      "thresholds": {
+        "likely_fake": "real_score < 0.40",
+        "uncertain": "0.40 <= real_score <= 0.60",
+        "likely_real": "real_score > 0.60",
+        "calibration_note": "provisional validation-derived ranges, not calibrated real-world confidence"
+      },
+      "detector_time_ms": 22.11,
+      "average_classification_time_ms": 173.276,
+      "faces": [
+        {
+          "face_index": 0,
+          "bounding_box": {
+            "x1": 45,
+            "y1": 54,
+            "x2": 215,
+            "y2": 224
+          },
+          "detection_confidence": 0.951409,
+          "image_width": 256,
+          "image_height": 256,
+          "crop_box": {
+            "x1": 11,
+            "y1": 18,
+            "x2": 249,
+            "y2": 256
+          },
+          "crop_width": 238,
+          "crop_height": 238,
+          "real_score": 0.844038,
+          "fake_score": 0.155962,
+          "label": "Likely Real",
+          "classification_time_ms": 173.276
+        }
+      ],
+      "processing_time_ms": 200.055
+    },
+    {
+      "image": "small_face_real.jpg",
+      "faces_detected": 1,
+      "status": "ok",
+      "detector": "opencv_haar_frontalface_default",
+      "preprocessing": {
+        "color_mode": "RGB",
+        "resize": [
+          256,
+          256
+        ],
+        "interpolation": "nearest",
+        "dtype": "float32",
+        "normalization": "divide_by_255",
+        "channels": "last"
+      },
+      "thresholds": {
+        "likely_fake": "real_score < 0.40",
+        "uncertain": "0.40 <= real_score <= 0.60",
+        "likely_real": "real_score > 0.60",
+        "calibration_note": "provisional validation-derived ranges, not calibrated real-world confidence"
+      },
+      "detector_time_ms": 52.73,
+      "average_classification_time_ms": 190.77,
+      "faces": [
+        {
+          "face_index": 0,
+          "bounding_box": {
+            "x1": 289,
+            "y1": 292,
+            "x2": 353,
+            "y2": 356
+          },
+          "detection_confidence": 0.952525,
+          "image_width": 640,
+          "image_height": 640,
+          "crop_box": {
+            "x1": 276,
+            "y1": 279,
+            "x2": 366,
+            "y2": 369
+          },
+          "crop_width": 90,
+          "crop_height": 90,
+          "real_score": 0.916249,
+          "fake_score": 0.083751,
+          "label": "Likely Real",
+          "classification_time_ms": 190.77
+        }
+      ],
+      "processing_time_ms": 251.9
+    }
+  ],
+  "classified_faces": 8,
+  "average_processing_time_ms": 1963.273,
+  "average_detector_time_ms": 262.449,
+  "average_classification_time_ms": 1692.657
+}

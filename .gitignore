@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+.venv-*/
+.venv-model-audit/
+venv/
+env/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Datasets
+data/raw/
+data/processed/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+
+# Models
+*.h5
+*.keras
+*.onnx
+*.tflite
+*.pt
+*.pth
+*.ckpt
+model/*.h5
+models/artifacts/*
+models/experiments/
+!models/artifacts/.gitkeep
+
+# Generated outputs
+phase2_samples/output/
+phase2_samples/crop_sweep/
+reports/**/predictions.csv
+reports/**/validation_predictions.csv
+reports/**/crop_sweep_predictions.csv
+reports/**/expanded_predictions.csv
+reports/**/uvicorn*.log
+reports/**/uvicorn.pid
+reports/**/uvicorn_job.id
+
+# JavaScript
+node_modules/
+coverage/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Credentials
+kaggle.json
+credentials.json
+secrets.json

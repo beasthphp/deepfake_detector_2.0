@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  python:
+    name: Python API and pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install lightweight test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-api.txt
+      - name: Compile Python source
+        run: python -m compileall api face_pipeline model_runtime scripts
+      - name: Run model-free and skip-safe tests
+        run: pytest api/tests face_pipeline/test_pipeline.py -q
+      - name: Check for tracked files larger than 100 MB
+        run: |
+          python - <<'PY'
+          import subprocess
+          import sys
+          from pathlib import Path
+          files = subprocess.check_output(["git", "ls-files"], text=True).splitlines()
+          large = [(p, Path(p).stat().st_size) for p in files if Path(p).is_file() and Path(p).stat().st_size > 100 * 1024 * 1024]
+          if large:
+              for path, size in large:
+                  print(f"{path}: {size} bytes")
+              sys.exit(1)
+          PY
+
+  extension:
+    name: Extension
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run extension unit tests
+        run: npm run test:extension
+      - name: JavaScript syntax checks
+        run: find extension -name '*.js' -print0 | xargs -0 -n1 node --check
+      - name: Manifest validation
+        run: node -e "JSON.parse(require('fs').readFileSync('extension/manifest.json','utf8')); console.log('manifest ok')"
+      - name: Unsafe rendering scan
+        run: python scripts/scan_extension_safety.py extension

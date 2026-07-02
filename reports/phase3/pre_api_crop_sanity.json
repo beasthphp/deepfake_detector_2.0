@@ -1,0 +1,1441 @@
+{
+  "summary": {
+    "sample_count": 25,
+    "ok_count": 25,
+    "no_face_detected_count": 0,
+    "prepared_face_bypass_count": 24,
+    "full_original_final_crop_count": 25,
+    "expanded_clamped_to_full_image_count": 25,
+    "model_input_pixels_identical_count": 25,
+    "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+    "conclusion": "expected_because_prepared_faces_occupy_full_frame"
+  },
+  "records": [
+    {
+      "relative_path": "test/real/16619.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 35,
+        "y1": 45,
+        "x2": 219,
+        "y2": 229
+      },
+      "original_pixel_hash": "65bad5428fe5d07f3fd8cf62f893c1a975da9ae673c13285d2fc61a1628bfa47",
+      "original_model_input_hash": "99402af683896823caf333ddd7ec882571197f5933cf8a752a4a392a1d4b76c5",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -39,
+        "y1": -84,
+        "x2": 293,
+        "y2": 293
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.516602,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.035156,
+        "face_center_offset_max": 0.035156
+      },
+      "final_model_input_hash": "99402af683896823caf333ddd7ec882571197f5933cf8a752a4a392a1d4b76c5",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/29984.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 38,
+        "y1": 53,
+        "x2": 215,
+        "y2": 230
+      },
+      "original_pixel_hash": "1f48b8bfa70c9571dfd241183e73411d7c34de70e47ab61f7f90b0bf6739e4e2",
+      "original_model_input_hash": "0988ec46f91893bb6cce621f214536be705f31ea5afcea37c737eb7984c249fd",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -33,
+        "y1": -71,
+        "x2": 286,
+        "y2": 292
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.478043,
+        "face_center_offset_x": 0.005859,
+        "face_center_offset_y": 0.052734,
+        "face_center_offset_max": 0.052734
+      },
+      "final_model_input_hash": "0988ec46f91893bb6cce621f214536be705f31ea5afcea37c737eb7984c249fd",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/46844.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 39,
+        "y1": 49,
+        "x2": 219,
+        "y2": 229
+      },
+      "original_pixel_hash": "666b6ec7c99fb69d7a1b875e8f292a5f039c3eda652f52313bbbe4c35130295d",
+      "original_model_input_hash": "17209682e2f352aa9772b794581cbb908b6410f5e4adbd6453ff1f0eaba22673",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -33,
+        "y1": -77,
+        "x2": 291,
+        "y2": 292
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.494385,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.042969,
+        "face_center_offset_max": 0.042969
+      },
+      "final_model_input_hash": "17209682e2f352aa9772b794581cbb908b6410f5e4adbd6453ff1f0eaba22673",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/05920.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 28,
+        "y1": 45,
+        "x2": 218,
+        "y2": 235
+      },
+      "original_pixel_hash": "7a166130aa1209a7ad49a7d103d2fbe4017e3f1694ca77b03ad6175ec05dda80",
+      "original_model_input_hash": "c945c6f9b6d94c88aed51b9588ff457315a726675015cb6ddd245dd034534271",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -48,
+        "y1": -88,
+        "x2": 294,
+        "y2": 302
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.550842,
+        "face_center_offset_x": 0.019531,
+        "face_center_offset_y": 0.046875,
+        "face_center_offset_max": 0.046875
+      },
+      "final_model_input_hash": "c945c6f9b6d94c88aed51b9588ff457315a726675015cb6ddd245dd034534271",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/02858.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 46,
+        "y1": 61,
+        "x2": 212,
+        "y2": 227
+      },
+      "original_pixel_hash": "563c433fc45d0e3f37e493cbba6fe5281018d0357d340af8d6009f867cf1ca96",
+      "original_model_input_hash": "3e03e43854ba4efa71dd207597f1280b369e6fbd294cc33a76e5690d0a54cc67",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -20,
+        "y1": -55,
+        "x2": 278,
+        "y2": 285
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.420471,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.0625,
+        "face_center_offset_max": 0.0625
+      },
+      "final_model_input_hash": "3e03e43854ba4efa71dd207597f1280b369e6fbd294cc33a76e5690d0a54cc67",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/17461.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 43,
+        "y1": 55,
+        "x2": 213,
+        "y2": 225
+      },
+      "original_pixel_hash": "bdbf7ba696e569b8991305a0bb440040b03f7672f8986b29bb96f9ef39efdaf8",
+      "original_model_input_hash": "eb77bbe75b999388bc7c0e0ab4b5131b47554279f561018b3a411b6b2a3c897f",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -25,
+        "y1": -64,
+        "x2": 281,
+        "y2": 284
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.440979,
+        "face_center_offset_x": 0.0,
+        "face_center_offset_y": 0.046875,
+        "face_center_offset_max": 0.046875
+      },
+      "final_model_input_hash": "eb77bbe75b999388bc7c0e0ab4b5131b47554279f561018b3a411b6b2a3c897f",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/21130.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 43,
+        "y1": 55,
+        "x2": 214,
+        "y2": 226
+      },
+      "original_pixel_hash": "862d189e58846c0025ffbbaf84fb7b23a6914c627a790f3dd3571b0407f37cfb",
+      "original_model_input_hash": "f9fb7f2a0cf7faffaf672b3466e2555b5c3966276607c9dc2b1c1b0d87f61476",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -25,
+        "y1": -65,
+        "x2": 282,
+        "y2": 286
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.446182,
+        "face_center_offset_x": 0.001953,
+        "face_center_offset_y": 0.048828,
+        "face_center_offset_max": 0.048828
+      },
+      "final_model_input_hash": "f9fb7f2a0cf7faffaf672b3466e2555b5c3966276607c9dc2b1c1b0d87f61476",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/32827.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 54,
+        "y1": 53,
+        "x2": 225,
+        "y2": 224
+      },
+      "original_pixel_hash": "e5fbb09c209980abc88bb7a121612848d16d80998f2681eaa0007b7cb2d79874",
+      "original_model_input_hash": "50ceac0989106e1ca28a064480539abc148552968bc1a95f8379d7244b31a7b6",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -14,
+        "y1": -67,
+        "x2": 293,
+        "y2": 284
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.446182,
+        "face_center_offset_x": 0.044922,
+        "face_center_offset_y": 0.041016,
+        "face_center_offset_max": 0.044922
+      },
+      "final_model_input_hash": "50ceac0989106e1ca28a064480539abc148552968bc1a95f8379d7244b31a7b6",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/61096.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 35,
+        "y1": 52,
+        "x2": 219,
+        "y2": 236
+      },
+      "original_pixel_hash": "9a18100ec07f99060dabc72ef4cc61731154b53e433d166c23a1088cc18551db",
+      "original_model_input_hash": "536ed3af37ba0e4a2b0cf1db32bbebf0c20c1561452269b29d537b36b64435ef",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -39,
+        "y1": -77,
+        "x2": 293,
+        "y2": 300
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.516602,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.0625,
+        "face_center_offset_max": 0.0625
+      },
+      "final_model_input_hash": "536ed3af37ba0e4a2b0cf1db32bbebf0c20c1561452269b29d537b36b64435ef",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/34125.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 2,
+      "detected_bounding_box": {
+        "x1": 52,
+        "y1": 63,
+        "x2": 208,
+        "y2": 219
+      },
+      "original_pixel_hash": "523aa3af1639ad36cbe34a8b609bbad58c32f00c3616afce7a57802aa89ff42a",
+      "original_model_input_hash": "dd3be55ae534cc30ed6e4bb467895af760c9f466eb104f7012077e0947b28508",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -10,
+        "y1": -46,
+        "x2": 270,
+        "y2": 274
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": false,
+      "preserve_original_reasons": [
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [
+        "multiple_faces_detected"
+      ],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.371338,
+        "face_center_offset_x": 0.007812,
+        "face_center_offset_y": 0.050781,
+        "face_center_offset_max": 0.050781
+      },
+      "final_model_input_hash": "dd3be55ae534cc30ed6e4bb467895af760c9f466eb104f7012077e0947b28508",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/66344.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 45,
+        "y1": 54,
+        "x2": 226,
+        "y2": 235
+      },
+      "original_pixel_hash": "9242fef19dc000d229d5b80c23f72c4799914121919b03e639ae74bbc56672d0",
+      "original_model_input_hash": "716d43eb440a561e257a1fc588d4b368e9cdc4e64a47a3a40213e39aacb84101",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -27,
+        "y1": -73,
+        "x2": 298,
+        "y2": 298
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.499893,
+        "face_center_offset_x": 0.029297,
+        "face_center_offset_y": 0.064453,
+        "face_center_offset_max": 0.064453
+      },
+      "final_model_input_hash": "716d43eb440a561e257a1fc588d4b368e9cdc4e64a47a3a40213e39aacb84101",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/11035.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 32,
+        "y1": 44,
+        "x2": 218,
+        "y2": 230
+      },
+      "original_pixel_hash": "7f7093506313ca3057cc46f3b9d8e50a6368a71bda93aedbf136b49bd9b66f6d",
+      "original_model_input_hash": "7fb98d772b17044e139dd34a58a52b859afed653795cc207f719eb138c64c7d0",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -42,
+        "y1": -86,
+        "x2": 292,
+        "y2": 295
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.527893,
+        "face_center_offset_x": 0.011719,
+        "face_center_offset_y": 0.035156,
+        "face_center_offset_max": 0.035156
+      },
+      "final_model_input_hash": "7fb98d772b17044e139dd34a58a52b859afed653795cc207f719eb138c64c7d0",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/07658.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 53,
+        "y1": 63,
+        "x2": 207,
+        "y2": 217
+      },
+      "original_pixel_hash": "78393d73209925ea4f6cd341a0656f07febf308cca29dd2a8f7ebe08abcbd505",
+      "original_model_input_hash": "bc2dc35de58da772fc17a531467f3ceaf14c77e1446d879fca511cf620c39cc4",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -9,
+        "y1": -45,
+        "x2": 269,
+        "y2": 271
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.361877,
+        "face_center_offset_x": 0.007812,
+        "face_center_offset_y": 0.046875,
+        "face_center_offset_max": 0.046875
+      },
+      "final_model_input_hash": "bc2dc35de58da772fc17a531467f3ceaf14c77e1446d879fca511cf620c39cc4",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/44175.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 50,
+        "y1": 63,
+        "x2": 207,
+        "y2": 220
+      },
+      "original_pixel_hash": "a5a3a1f34d00aa84b97a43d7299e91c02a821aedabc7a1b4e45cab1c6a09e3df",
+      "original_model_input_hash": "121172d9c885af2996602d1f598904626b62dbb140e05cda2efb6be258c2cbbe",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -13,
+        "y1": -47,
+        "x2": 270,
+        "y2": 275
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.376114,
+        "face_center_offset_x": 0.001953,
+        "face_center_offset_y": 0.052734,
+        "face_center_offset_max": 0.052734
+      },
+      "final_model_input_hash": "121172d9c885af2996602d1f598904626b62dbb140e05cda2efb6be258c2cbbe",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/27085.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 39,
+        "y1": 61,
+        "x2": 209,
+        "y2": 231
+      },
+      "original_pixel_hash": "7007161ca5b8954953abe03739deef3be4c58db30343d0d6826ce274a78b5bc9",
+      "original_model_input_hash": "3c914686a6ec4c732f7df94db0c43a8ffc281cc205d1b981d166a3995ff212f4",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -29,
+        "y1": -58,
+        "x2": 277,
+        "y2": 290
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.440979,
+        "face_center_offset_x": 0.015625,
+        "face_center_offset_y": 0.070312,
+        "face_center_offset_max": 0.070312
+      },
+      "final_model_input_hash": "3c914686a6ec4c732f7df94db0c43a8ffc281cc205d1b981d166a3995ff212f4",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/08063.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 50,
+        "y1": 67,
+        "x2": 204,
+        "y2": 221
+      },
+      "original_pixel_hash": "8d97204051236864e5e388fe0f534cbf2804e650b42d35d98c8ae01fdba43b7f",
+      "original_model_input_hash": "5e427090dca6819a016e68afcdf1ef4e1c65f54b59a6036b3eff3d0df971ad81",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -12,
+        "y1": -41,
+        "x2": 266,
+        "y2": 275
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.361877,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.0625,
+        "face_center_offset_max": 0.0625
+      },
+      "final_model_input_hash": "5e427090dca6819a016e68afcdf1ef4e1c65f54b59a6036b3eff3d0df971ad81",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/30285.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 55,
+        "y1": 61,
+        "x2": 214,
+        "y2": 220
+      },
+      "original_pixel_hash": "a1b36e2537446632b8e57bb2579c39bb910dec2b67bc5cba82d74cd60150c2d5",
+      "original_model_input_hash": "83df6d2d6dd4af7def33de9bf88514785b9eb691ebd25263ea1cf369d8798f40",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -9,
+        "y1": -50,
+        "x2": 278,
+        "y2": 276
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.385757,
+        "face_center_offset_x": 0.025391,
+        "face_center_offset_y": 0.048828,
+        "face_center_offset_max": 0.048828
+      },
+      "final_model_input_hash": "83df6d2d6dd4af7def33de9bf88514785b9eb691ebd25263ea1cf369d8798f40",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/08818.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 44,
+        "y1": 51,
+        "x2": 224,
+        "y2": 231
+      },
+      "original_pixel_hash": "bdfe4b66120ea2e84d1a306ad4be340417c2b66995b7a8139d1c4b3df7fc5a34",
+      "original_model_input_hash": "050c77beb7ee8b6ee212252db3da49e2b2652ed6910439ba563a995482c23752",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -28,
+        "y1": -75,
+        "x2": 296,
+        "y2": 294
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.494385,
+        "face_center_offset_x": 0.023438,
+        "face_center_offset_y": 0.050781,
+        "face_center_offset_max": 0.050781
+      },
+      "final_model_input_hash": "050c77beb7ee8b6ee212252db3da49e2b2652ed6910439ba563a995482c23752",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/03635.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 42,
+        "y1": 53,
+        "x2": 216,
+        "y2": 227
+      },
+      "original_pixel_hash": "4db0c8148ff5a2c1e661c21a0ddc0a00ac3ed32ec619d5597ac152a78b3d0907",
+      "original_model_input_hash": "94868846b6d68da12c24cbf61b236b11f58f2a1c710ade266ceeb611653d09df",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -28,
+        "y1": -69,
+        "x2": 286,
+        "y2": 288
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.461975,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.046875,
+        "face_center_offset_max": 0.046875
+      },
+      "final_model_input_hash": "94868846b6d68da12c24cbf61b236b11f58f2a1c710ade266ceeb611653d09df",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/66277.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 37,
+        "y1": 47,
+        "x2": 221,
+        "y2": 231
+      },
+      "original_pixel_hash": "b8b742fe65b1ccd00d055ee05e5d74a70d3babf5a0720c972c7aa38cdc1d0970",
+      "original_model_input_hash": "9aa15112f542850b4a1d6a295992b9ae2e54f17be09d88093739930d6daed91a",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -37,
+        "y1": -82,
+        "x2": 295,
+        "y2": 295
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.516602,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.042969,
+        "face_center_offset_max": 0.042969
+      },
+      "final_model_input_hash": "9aa15112f542850b4a1d6a295992b9ae2e54f17be09d88093739930d6daed91a",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/21504.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 38,
+        "y1": 52,
+        "x2": 215,
+        "y2": 229
+      },
+      "original_pixel_hash": "0fda4768ae7227b95bbb2f38b123e0d7f3d5f6e325eabd9a1d93e8d27d4a7e99",
+      "original_model_input_hash": "90c31ff9dfa8d92e5804ed3fa48e2cf20098404ea77da297ed345b876a4029f9",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -33,
+        "y1": -72,
+        "x2": 286,
+        "y2": 291
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.478043,
+        "face_center_offset_x": 0.005859,
+        "face_center_offset_y": 0.048828,
+        "face_center_offset_max": 0.048828
+      },
+      "final_model_input_hash": "90c31ff9dfa8d92e5804ed3fa48e2cf20098404ea77da297ed345b876a4029f9",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/21859.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 47,
+        "y1": 61,
+        "x2": 211,
+        "y2": 225
+      },
+      "original_pixel_hash": "8d18330a3534ef009ae84acbdc40a4d87720a0f8e9da51faf526f98713f29c20",
+      "original_model_input_hash": "6c472f889e5311de59c95230341b7e8b6ce90d11361984cf8c872017b6b6ba62",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -19,
+        "y1": -54,
+        "x2": 277,
+        "y2": 282
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.4104,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.058594,
+        "face_center_offset_max": 0.058594
+      },
+      "final_model_input_hash": "6c472f889e5311de59c95230341b7e8b6ce90d11361984cf8c872017b6b6ba62",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/53182.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 54,
+        "y1": 60,
+        "x2": 210,
+        "y2": 216
+      },
+      "original_pixel_hash": "45a99c02969ab7ea69bd21e0128e571b8229dbaba6c715ef83d4684942bae590",
+      "original_model_input_hash": "fe453ea8eff98c612ec61b32f77d558daf5faa7fe64a067fca09d86e3dff6510",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -8,
+        "y1": -49,
+        "x2": 272,
+        "y2": 271
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.371338,
+        "face_center_offset_x": 0.015625,
+        "face_center_offset_y": 0.039062,
+        "face_center_offset_max": 0.039062
+      },
+      "final_model_input_hash": "fe453ea8eff98c612ec61b32f77d558daf5faa7fe64a067fca09d86e3dff6510",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/06470.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 46,
+        "y1": 62,
+        "x2": 208,
+        "y2": 224
+      },
+      "original_pixel_hash": "46f85667deb5cb18eb84765b2508d7525dc5ca982f7fb0e873e22b7842b73401",
+      "original_model_input_hash": "6eb506794830f5b5f9d4e44468e34b81b9233680a3c81a7f11faeefe6537bf75",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -19,
+        "y1": -51,
+        "x2": 273,
+        "y2": 281
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.400452,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.058594,
+        "face_center_offset_max": 0.058594
+      },
+      "final_model_input_hash": "6eb506794830f5b5f9d4e44468e34b81b9233680a3c81a7f11faeefe6537bf75",
+      "model_input_pixels_identical": true
+    },
+    {
+      "relative_path": "test/real/51788.jpg",
+      "true_label": "real",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "faces_detected": 1,
+      "detected_bounding_box": {
+        "x1": 44,
+        "y1": 56,
+        "x2": 210,
+        "y2": 222
+      },
+      "original_pixel_hash": "1531e540c68b8d493d7fcb95987da11109b3ceb139cd42db63124b14689fbf59",
+      "original_model_input_hash": "ebcf2ceb7d894e24caaf7771200d6a953e99c2dad429702b9a38aefb3549ce09",
+      "status": "ok",
+      "selected_strategy": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "proposed_expanded_crop_box": {
+        "x1": -22,
+        "y1": -60,
+        "x2": 276,
+        "y2": 280
+      },
+      "expanded_clamped_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_clamped_crop_box": {
+        "x1": 0,
+        "y1": 0,
+        "x2": 256,
+        "y2": 256
+      },
+      "final_crop_equals_complete_original": true,
+      "prepared_face_bypass_fired": true,
+      "preserve_original_reasons": [
+        "single_face",
+        "square_image",
+        "image_is_256x256",
+        "face_is_centered",
+        "face_occupancy_above_threshold",
+        "bounding_box_inside_image"
+      ],
+      "preserve_original_blockers": [],
+      "preserve_original_metrics": {
+        "image_aspect_ratio": 1.0,
+        "face_occupancy_ratio": 0.420471,
+        "face_center_offset_x": 0.003906,
+        "face_center_offset_y": 0.042969,
+        "face_center_offset_max": 0.042969
+      },
+      "final_model_input_hash": "ebcf2ceb7d894e24caaf7771200d6a953e99c2dad429702b9a38aefb3549ce09",
+      "model_input_pixels_identical": true
+    }
+  ]
+}

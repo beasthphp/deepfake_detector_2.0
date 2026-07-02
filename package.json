@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "scripts": {
+    "test:extension": "node --test extension/tests/*.test.mjs",
+    "check:extension:manifest": "node -e \"JSON.parse(require('fs').readFileSync('extension/manifest.json','utf8')); console.log('manifest ok')\""
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "default_model_id": "legacy-cnn-v1",
+  "models": [
+    {
+      "id": "legacy-cnn-v1",
+      "version": "1",
+      "name": "Legacy custom CNN human-face deepfake detector",
+      "framework": "tensorflow-keras",
+      "provider": "tensorflow_binary_face",
+      "local_filename": "deepfake_detector_93acc.h5",
+      "download_url": null,
+      "sha256": null,
+      "file_types": [".h5"],
+      "input_size": [256, 256, 3],
+      "output_shape": [null, 1],
+      "output_interpretation": "Single sigmoid score where real_score = model output and fake_score = 1 - real_score.",
+      "class_mapping": {
+        "fake": 0,
+        "real": 1
+      },
+      "threshold_profile": {
+        "id": "score-thresholds",
+        "version": "1",
+        "likely_fake_below": 0.4,
+        "likely_real_above": 0.6
+      },
+      "enabled": true
+    }
+  ]
+}

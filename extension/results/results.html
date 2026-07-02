@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deepfake Analysis Results</title>
+    <link rel="stylesheet" href="results.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div>
+          <h1>Analysis Results</h1>
+          <p id="statusLine" class="muted"></p>
+        </div>
+        <button id="clearHistory" type="button">Clear history</button>
+      </header>
+
+      <section class="summary-band">
+        <p id="summaryText"></p>
+        <p id="notice"></p>
+      </section>
+
+      <section class="details-grid">
+        <div class="panel">
+          <h2>Request</h2>
+          <dl id="requestDetails"></dl>
+          <a id="originalImageLink" class="link-button" target="_blank" rel="noreferrer noopener">Open original image</a>
+        </div>
+        <div class="panel">
+          <h2>API Timing</h2>
+          <dl id="timingDetails"></dl>
+        </div>
+      </section>
+
+      <section>
+        <h2>Faces</h2>
+        <div id="faces" class="faces"></div>
+      </section>
+
+      <section>
+        <h2>Warnings</h2>
+        <ul id="warnings"></ul>
+      </section>
+    </main>
+    <script type="module" src="results.js"></script>
+  </body>
+</html>

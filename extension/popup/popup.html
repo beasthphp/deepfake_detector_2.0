@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deepfake Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="header">
+        <div>
+          <h1>Deepfake Analyzer</h1>
+          <p id="apiOrigin" class="muted"></p>
+        </div>
+        <span id="apiStatus" class="status-dot">Checking</span>
+      </header>
+
+      <section class="section">
+        <h2>Latest Request</h2>
+        <p id="requestStatus" class="primary-text">No analysis yet</p>
+        <p id="selectedImage" class="muted url-text"></p>
+        <p id="faceSummary" class="summary"></p>
+        <div id="faceList" class="face-list"></div>
+        <p id="notice" class="notice"></p>
+      </section>
+
+      <section class="section">
+        <h2>Page Scanning</h2>
+        <p id="scanStatus" class="primary-text">Not scanning</p>
+        <p id="siteMode" class="muted"></p>
+        <div class="scan-actions">
+          <button id="scanVisibleImages" type="button">Scan visible images</button>
+          <button id="stopScanning" type="button">Stop scanning</button>
+          <button id="rescanPage" type="button">Rescan page</button>
+          <button id="clearPageResults" type="button">Clear page results</button>
+          <button id="enableSite" type="button">Enable scanning on this site</button>
+          <button id="disableSite" type="button">Disable scanning on this site</button>
+          <button id="clearPredictionCache" type="button">Clear cache</button>
+          <button id="globalStop" type="button">Emergency stop</button>
+          <button id="resumeGlobal" type="button">Resume scanning</button>
+        </div>
+      </section>
+
+      <footer class="actions">
+        <button id="openResults" type="button">Open results</button>
+        <button id="clearResults" type="button">Clear</button>
+        <button id="openOptions" type="button">Options</button>
+      </footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

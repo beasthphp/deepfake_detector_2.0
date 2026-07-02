@@ -1,0 +1,82 @@
+[
+  {
+    "path": "test/real/30872.jpg",
+    "true_label": "real",
+    "raw_model_output_real_score": 0.9992108345031738,
+    "fake_score": 0.0007891654968261719,
+    "predicted_label": "real",
+    "correct": true
+  },
+  {
+    "path": "test/real/27074.jpg",
+    "true_label": "real",
+    "raw_model_output_real_score": 0.9943822622299194,
+    "fake_score": 0.005617737770080566,
+    "predicted_label": "real",
+    "correct": true
+  },
+  {
+    "path": "test/real/17420.jpg",
+    "true_label": "real",
+    "raw_model_output_real_score": 0.99885493516922,
+    "fake_score": 0.0011450648307800293,
+    "predicted_label": "real",
+    "correct": true
+  },
+  {
+    "path": "test/real/45130.jpg",
+    "true_label": "real",
+    "raw_model_output_real_score": 0.5936801433563232,
+    "fake_score": 0.40631985664367676,
+    "predicted_label": "real",
+    "correct": true
+  },
+  {
+    "path": "test/real/48312.jpg",
+    "true_label": "real",
+    "raw_model_output_real_score": 0.9872380495071411,
+    "fake_score": 0.012761950492858887,
+    "predicted_label": "real",
+    "correct": true
+  },
+  {
+    "path": "test/fake/6MJFQXMTQ1.jpg",
+    "true_label": "fake",
+    "raw_model_output_real_score": 0.16193759441375732,
+    "fake_score": 0.8380624055862427,
+    "predicted_label": "fake",
+    "correct": true
+  },
+  {
+    "path": "test/fake/KDVBU1XEB9.jpg",
+    "true_label": "fake",
+    "raw_model_output_real_score": 4.4835807784693316e-05,
+    "fake_score": 0.9999551641922153,
+    "predicted_label": "fake",
+    "correct": true
+  },
+  {
+    "path": "test/fake/ADJWQO1GRK.jpg",
+    "true_label": "fake",
+    "raw_model_output_real_score": 0.6227778792381287,
+    "fake_score": 0.37722212076187134,
+    "predicted_label": "real",
+    "correct": false
+  },
+  {
+    "path": "test/fake/YA9YTPHW20.jpg",
+    "true_label": "fake",
+    "raw_model_output_real_score": 0.0005134602542966604,
+    "fake_score": 0.9994865397457033,
+    "predicted_label": "fake",
+    "correct": true
+  },
+  {
+    "path": "test/fake/YQN0ECMOSQ.jpg",
+    "true_label": "fake",
+    "raw_model_output_real_score": 0.09875861555337906,
+    "fake_score": 0.9012413844466209,
+    "predicted_label": "fake",
+    "correct": true
+  }
+]

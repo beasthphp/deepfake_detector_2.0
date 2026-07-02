@@ -1,0 +1,38 @@
+name: Feature request
+description: Request a focused API, extension, workflow, or documentation feature.
+title: "feat: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user need does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: checkboxes
+    id: impacts
+    attributes:
+      label: Impact areas
+      options:
+        - label: API contract
+        - label: Extension UI
+        - label: Privacy or security
+        - label: Model versioning
+        - label: Documentation

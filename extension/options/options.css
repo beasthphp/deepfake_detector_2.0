@@ -1,0 +1,95 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  color: #172231;
+  background: #f5f7fa;
+}
+
+.options-page {
+  width: min(720px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.notice {
+  margin: 0 0 18px;
+  padding: 10px 12px;
+  border-left: 3px solid #9b6b1a;
+  background: #fff4d6;
+  color: #60410b;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid #d8e1eb;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 650;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+input[type="url"],
+input[type="number"],
+select {
+  min-height: 34px;
+  border: 1px solid #b7c4d3;
+  border-radius: 6px;
+  padding: 0 10px;
+  font: inherit;
+  background: #ffffff;
+}
+
+.message {
+  min-height: 20px;
+  color: #315b22;
+}
+
+.message.error {
+  color: #8d251b;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid #b7c4d3;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #172231;
+  font: inherit;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: #1f5b99;
+  border-color: #1f5b99;
+  color: #ffffff;
+  font-weight: 700;
+}

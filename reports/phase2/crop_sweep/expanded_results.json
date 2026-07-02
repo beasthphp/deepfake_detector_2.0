@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "split": "valid",
+    "sample_count": 200,
+    "seed": 69,
+    "strategies": [
+      "context_full_head_l40_r40_t70_b35_square",
+      "preserve_or_context_full_head_l40_r40_t70_b35_square"
+    ]
+  },
+  "strategies": {
+    "context_full_head_l40_r40_t70_b35_square": {
+      "name": "context_full_head_l40_r40_t70_b35_square",
+      "family": "context_square",
+      "description": "Full-head contextual square crop with 40/40/70/35% left/right/top/bottom expansion.",
+      "margin": null,
+      "expansion": {
+        "left": 0.4,
+        "right": 0.4,
+        "top": 0.7,
+        "bottom": 0.35
+      },
+      "padding_method": null,
+      "fallback": null
+    },
+    "preserve_or_context_full_head_l40_r40_t70_b35_square": {
+      "name": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "family": "prepared_face_conditional",
+      "description": "Use the original image when the prepared-face bypass fires; otherwise use `context_full_head_l40_r40_t70_b35_square`.",
+      "margin": null,
+      "expansion": null,
+      "padding_method": null,
+      "fallback": {
+        "name": "context_full_head_l40_r40_t70_b35_square",
+        "family": "context_square",
+        "description": "Full-head contextual square crop with 40/40/70/35% left/right/top/bottom expansion.",
+        "margin": null,
+        "expansion": {
+          "left": 0.4,
+          "right": 0.4,
+          "top": 0.7,
+          "bottom": 0.35
+        },
+        "padding_method": null,
+        "fallback": null
+      }
+    }
+  },
+  "summaries": [
+    {
+      "strategy_name": "context_full_head_l40_r40_t70_b35_square",
+      "strategy_family": "context_square",
+      "evaluated_image_count": 190,
+      "sample_count": 200,
+      "failed_detection_count": 10,
+      "crop_failure_count": 0,
+      "failure_rate": 0.05,
+      "average_abs_score_difference": 0.0,
+      "median_abs_score_difference": 0.0,
+      "p90_abs_score_difference": 0.0,
+      "max_abs_score_difference": 0.0,
+      "total_class_changes": 0,
+      "fake_to_real_flips": 0,
+      "real_to_fake_flips": 0,
+      "uncertain_results": 8,
+      "became_uncertain": 0,
+      "accuracy_after_crop": 0.957895,
+      "fake_recall_after_crop": 0.959596,
+      "real_recall_after_crop": 0.956044,
+      "fake_to_real_flip_rate": 0.0,
+      "total_class_change_rate": 0.0,
+      "preserved_original_count": 0,
+      "average_processing_time_ms": 27.714
+    },
+    {
+      "strategy_name": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "strategy_family": "prepared_face_conditional",
+      "evaluated_image_count": 190,
+      "sample_count": 200,
+      "failed_detection_count": 10,
+      "crop_failure_count": 0,
+      "failure_rate": 0.05,
+      "average_abs_score_difference": 0.0,
+      "median_abs_score_difference": 0.0,
+      "p90_abs_score_difference": 0.0,
+      "max_abs_score_difference": 0.0,
+      "total_class_changes": 0,
+      "fake_to_real_flips": 0,
+      "real_to_fake_flips": 0,
+      "uncertain_results": 8,
+      "became_uncertain": 0,
+      "accuracy_after_crop": 0.957895,
+      "fake_recall_after_crop": 0.959596,
+      "real_recall_after_crop": 0.956044,
+      "fake_to_real_flip_rate": 0.0,
+      "total_class_change_rate": 0.0,
+      "preserved_original_count": 190,
+      "average_processing_time_ms": 27.05
+    }
+  ],
+  "ranking": [
+    {
+      "strategy_name": "preserve_or_context_full_head_l40_r40_t70_b35_square",
+      "strategy_family": "prepared_face_conditional",
+      "evaluated_image_count": 190,
+      "sample_count": 200,
+      "failed_detection_count": 10,
+      "crop_failure_count": 0,
+      "failure_rate": 0.05,
+      "average_abs_score_difference": 0.0,
+      "median_abs_score_difference": 0.0,
+      "p90_abs_score_difference": 0.0,
+      "max_abs_score_difference": 0.0,
+      "total_class_changes": 0,
+      "fake_to_real_flips": 0,
+      "real_to_fake_flips": 0,
+      "uncertain_results": 8,
+      "became_uncertain": 0,
+      "accuracy_after_crop": 0.957895,
+      "fake_recall_after_crop": 0.959596,
+      "real_recall_after_crop": 0.956044,
+      "fake_to_real_flip_rate": 0.0,
+      "total_class_change_rate": 0.0,
+      "preserved_original_count": 190,
+      "average_processing_time_ms": 27.05,
+      "rank": 1
+    },
+    {
+      "strategy_name": "context_full_head_l40_r40_t70_b35_square",
+      "strategy_family": "context_square",
+      "evaluated_image_count": 190,
+      "sample_count": 200,
+      "failed_detection_count": 10,
+      "crop_failure_count": 0,
+      "failure_rate": 0.05,
+      "average_abs_score_difference": 0.0,
+      "median_abs_score_difference": 0.0,
+      "p90_abs_score_difference": 0.0,
+      "max_abs_score_difference": 0.0,
+      "total_class_changes": 0,
+      "fake_to_real_flips": 0,
+      "real_to_fake_flips": 0,
+      "uncertain_results": 8,
+      "became_uncertain": 0,
+      "accuracy_after_crop": 0.957895,
+      "fake_recall_after_crop": 0.959596,
+      "real_recall_after_crop": 0.956044,
+      "fake_to_real_flip_rate": 0.0,
+      "total_class_change_rate": 0.0,
+      "preserved_original_count": 0,
+      "average_processing_time_ms": 27.714,
+      "rank": 2
+    }
+  ]
+}
