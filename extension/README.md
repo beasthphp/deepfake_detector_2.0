@@ -1,8 +1,8 @@
 # Local Deepfake Face Analyzer Extension
 
-This is the Phase 5 Chrome/Chromium extension prototype.
+The Chrome/Chromium Manifest V3 extension is the user-facing layer of the local deepfake-analysis MVP.
 
-It supports two user-controlled flows:
+It supports two explicit, user-controlled workflows:
 
 ```text
 Right-click webpage image
@@ -14,12 +14,14 @@ Right-click webpage image
 ```text
 Open popup
     -> Scan visible images
-    -> Eligible visible/near-viewport images are queued
+    -> Queue eligible visible/near-viewport images
     -> Local FastAPI /predict
-    -> Per-face overlays on detected faces
+    -> Render per-face overlays
 ```
 
-The current classifier is an experimental placeholder. Real-world predictions are not reliable or externally validated.
+The extension is intentionally separated from model logic. It handles image eligibility, bounded scanning, caching, request orchestration, and result presentation while the active detector remains behind the local API/model-provider boundary.
+
+> The current classifier is an experimental placeholder. Predictions are not externally validated and should not be treated as proof that an image is real or fake.
 
 ## Defaults
 
@@ -55,7 +57,7 @@ Page scanning skips browser-internal pages, password pages, `data:` URLs, `blob:
 
 ## Development Checks
 
-Latest automated results:
+Latest automated results recorded for the prototype:
 
 ```text
 Extension tests: 24 passed, 0 failed
@@ -65,4 +67,4 @@ Manifest parse: passed
 Unsafe rendering scan: no innerHTML/eval/document.write matches
 ```
 
-See `reports/phase5` for setup, automated results, manual test plan, and the Phase 5 report.
+See `reports/phase5` for setup notes, automated results, the manual test plan, and the Phase 5 report.
