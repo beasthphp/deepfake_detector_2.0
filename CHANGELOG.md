@@ -12,6 +12,14 @@
 - Cache and model-version invalidation.
 - Automated tests.
 - Replaceable model-provider registry.
+- Component-level documentation for the API, extension, preprocessing, evaluation, model runtime, and training workflow.
+
+### Documentation
+
+- Clarified architecture boundaries between browser, API, face pipeline, and model provider.
+- Connected the model card to evaluation/runtime artifacts.
+- Prioritized external validation and model replacement in the roadmap.
+- Documented local API, image-privacy, and model-integrity boundaries.
 
 ### Known limitations
 
