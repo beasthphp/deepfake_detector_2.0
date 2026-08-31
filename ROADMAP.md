@@ -1,26 +1,35 @@
 # Roadmap
 
+The application integration is functional; the highest-priority remaining work is **model quality and external validation**, not adding more UI features.
+
 ## Completed
 
 - Model audit.
 - Face pipeline.
-- API.
+- Local FastAPI inference service.
 - Manual extension analysis.
-- Page scanning.
-- Overlays.
-- Cache.
-- Tests.
+- Visible-page scanning.
+- Per-face overlays.
+- Prediction cache and deduplication.
+- Automated API/extension checks.
+- Replaceable model-provider boundary.
 
-## Next
+## Next — Model Quality
 
-- Complete Phase 5 manual browser test plan.
-- Build multi-dataset collection pipeline.
-- Add identity-aware or source-aware splits.
-- Generate production-style face crops.
-- Train MobileNetV3Large baseline.
+- Build a multi-dataset collection pipeline.
+- Add identity-aware or source-aware train/validation/test splits.
+- Generate production-style face crops that match browser inputs.
+- Train a MobileNetV3Large baseline.
 - Run external holdout evaluation.
+- Measure robustness under compression, resizing, and screenshots.
 - Calibrate scores and uncertainty thresholds.
-- Replace current model through the provider registry.
+- Replace the current model through the provider registry.
+
+## Next — Product Validation
+
+- Complete the Phase 5 manual browser test plan.
+- Validate the extension on a wider range of websites and image layouts.
+- Review error states for missing faces, failed crops, and unavailable model artifacts.
 
 ## Later
 
@@ -28,8 +37,8 @@
 - Export ONNX or TFLite inference artifacts.
 - Add API deployment packaging.
 - Prepare Chrome Web Store submission.
-- Publish privacy policy.
-- Add monitoring and rate limits.
+- Publish a privacy policy.
+- Add production-oriented monitoring and rate limits.
 
 ## Research Questions
 
