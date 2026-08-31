@@ -11,6 +11,10 @@ Webpage image
     -> Overlay renderer
 ```
 
+## Design Goals
+
+The architecture keeps browser behavior, HTTP handling, face preprocessing, and model-specific inference isolated from one another. The goal is to make the application easy to test and to allow the detector to be replaced without rewriting the extension or API contract.
+
 ## Extension
 
 The Manifest V3 extension supports manual image analysis and user-controlled visible-page scanning. It filters eligible images, deduplicates requests, sends images to the configured API origin, caches results by model/detector/crop/threshold version signature, and renders per-face overlays against displayed image geometry.
@@ -47,3 +51,9 @@ Only a provider should know:
 The registry in `models/registry.json` selects the active model by `ACTIVE_MODEL_ID`. `DEEPFAKE_MODEL_PATH` can override the local artifact path without changing source code.
 
 Startup fails clearly when the active model is unknown, disabled, missing, a Git LFS pointer, hash-mismatched, provider-unavailable, or contract-incompatible.
+
+## Related Documentation
+
+- `MODEL_CARD.md` — current model architecture, reproduced metrics, and limitations
+- `SECURITY.md` — privacy and security boundaries
+- `ROADMAP.md` — planned model and deployment improvements
