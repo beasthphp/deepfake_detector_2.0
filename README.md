@@ -1,41 +1,177 @@
-# Human-Face Deepfake Detection MVP
+# Human-Face Deepfake Detection — Browser Extension MVP
 
-This repository contains an experimental MVP for human-face deepfake detection on local images and user-controlled webpage images.
+A local-first deepfake-detection prototype that finds human faces in webpage images, crops each face, runs a replaceable TensorFlow/Keras classifier, and renders per-face results through a Chrome Manifest V3 extension.
 
-The included architecture is functional, but the current model is an experimental placeholder and should not be treated as proof of authenticity.
+The system is designed as an **end-to-end ML product prototype**: face preprocessing, model inference, FastAPI serving, browser integration, queueing/caching, automated tests, and explicit model limitations are all separated into replaceable components.
 
-## Purpose
+> **Important:** the current classifier is an experimental baseline. Its predictions are not proof that an image is authentic or manipulated, and its output scores are not calibrated confidence values.
 
-The system detects human faces, crops each detected face, classifies each crop with a replaceable local model provider, and returns stable metadata that a browser extension can render as per-face overlays.
-
-## Architecture
+## System Flow
 
 ```text
 Webpage image
-    -> Extension eligibility and queue
-    -> Local API
-    -> Face detector
-    -> Crop strategy
-    -> Model provider
-    -> Stable response contract
-    -> Overlay renderer
+      |
+      v
+Chrome MV3 Extension
+      |
+      +--> eligibility checks
+      +--> queue / deduplication / cache
+      |
+      v
+Local FastAPI Service
+      |
+      v
+Face Detection
+      |
+      v
+Face Crop + Preprocessing
+      |
+      v
+Replaceable Model Provider
+      |
+      v
+Likely Fake / Uncertain / Likely Real
+      |
+      v
+Per-face Browser Overlay
 ```
 
-## Completed Features
+## What Is Implemented
 
-- Existing TensorFlow human-face classifier audit and evaluation.
-- Face detection and crop pipeline.
-- Local FastAPI inference service.
-- Manual extension image analysis.
-- User-controlled visible webpage scanning.
-- Request queue, caching, and deduplication.
-- Responsive per-face overlays.
-- API and extension automated tests.
-- Replaceable model-provider boundary.
+- human-face detection and crop pipeline
+- local FastAPI inference service
+- Chrome Manifest V3 browser extension
+- right-click analysis of a selected webpage image
+- user-controlled scanning of visible page images
+- request queueing, caching, and image deduplication
+- per-face prediction overlays
+- site enable/disable controls and emergency-stop behavior
+- stable API response contract between model runtime and extension
+- replaceable model-provider boundary
+- automated API, pipeline, and extension tests
+- model registry and verification utilities
+- model card, architecture notes, security notes, roadmap, and release documentation
+
+## Tech Stack
+
+| Area | Technology |
+| --- | --- |
+| ML runtime | TensorFlow / Keras |
+| Image processing | OpenCV, Pillow, NumPy |
+| Inference API | Python, FastAPI, Uvicorn, Pydantic |
+| Browser client | Chrome Manifest V3, JavaScript |
+| Testing | pytest, Node-based extension tests |
+| Model management | JSON model registry + verification scripts |
+
+## Browser Extension
+
+The extension is built with **Manifest V3** and supports two main workflows.
+
+### Manual image analysis
+
+1. Right-click a webpage image.
+2. Choose the extension analysis action.
+3. The selected image is sent to the configured API.
+4. Detected faces are analyzed individually.
+5. Results are shown in the popup/results UI.
+
+### Visible-page scanning
+
+1. Open the extension popup.
+2. Choose `Scan visible images`.
+3. Eligible visible images are queued and deduplicated.
+4. Predictions are cached to avoid unnecessary repeated inference.
+5. Per-face overlays are rendered on the page.
+6. Scanning can be stopped, cleared, repeated, or disabled for the current site.
+
+By default, the extension talks to the local service at:
+
+```text
+http://127.0.0.1:8000
+```
+
+## ML Baseline
+
+The currently registered baseline is `legacy-cnn-v1`, a TensorFlow/Keras convolutional neural network.
+
+### Verified architecture
+
+```text
+256x256 RGB face
+      |
+Conv2D 32 + ReLU
+MaxPool
+      |
+Conv2D 64 + ReLU
+MaxPool
+      |
+Conv2D 128 + ReLU
+MaxPool
+      |
+Flatten
+Dense 128 + ReLU
+Dropout 0.5
+Dense 1 + Sigmoid
+```
+
+The saved model contains approximately **14.8 million trainable parameters**.
+
+The model outputs a `real_score`; the runtime derives:
+
+```text
+fake_score = 1 - real_score
+```
+
+The current provisional interpretation is:
+
+```text
+fake_score > 0.60       -> Likely Fake
+0.40 to 0.60            -> Uncertain
+fake_score < 0.40        -> Likely Real
+```
+
+These thresholds are application heuristics, not calibrated probabilities.
+
+## Reproduced Baseline Evaluation
+
+The repository includes a reproduced evaluation on the balanced local test split used by the legacy model audit:
+
+| Metric | Value |
+| --- | ---: |
+| Accuracy | 0.9397 |
+| Balanced accuracy | 0.9397 |
+| Fake precision | 0.9300 |
+| Fake recall | 0.9510 |
+| Fake F1 | 0.9404 |
+| Real precision | 0.9499 |
+| Real recall | 0.9284 |
+| Real F1 | 0.9390 |
+| ROC-AUC using fake score | 0.9847 |
+
+These results apply only to the reproduced local dataset split. **No external holdout validation has been completed**, so the numbers should not be interpreted as real-world deepfake detection performance.
+
+See `MODEL_CARD.md` for the full model audit, known validation flaw, dataset details, and prohibited interpretations.
+
+## Why the Model Is Replaceable
+
+The browser extension and API should not have to change every time a better model is trained.
+
+Models are therefore selected through `models/registry.json` and loaded behind the `model_runtime` provider boundary. A replacement model can keep the same input/output contract while the rest of the application remains stable.
+
+This separates:
+
+```text
+Browser UX
+API contract
+Face pipeline
+Model implementation
+```
+
+and makes the project useful even while the ML baseline is being improved.
 
 ## Quick Start
 
-Create an environment and install local API dependencies:
+Create a virtual environment and install API dependencies:
 
 ```powershell
 python -m venv .venv
@@ -49,7 +185,7 @@ Place the current legacy model at:
 models/artifacts/deepfake_detector_93acc.h5
 ```
 
-Or set an explicit local override:
+or configure an explicit local path:
 
 ```powershell
 $env:DEEPFAKE_MODEL_PATH="model/deepfake_detector_93acc.h5"
@@ -62,27 +198,13 @@ Start the API:
 uvicorn api.main:app --host 127.0.0.1 --port 8000
 ```
 
-## Extension Installation
+## Install the Extension
 
-1. Open Chrome or Chromium extension management.
-2. Enable developer mode.
-3. Load the `extension/` directory as an unpacked extension.
-4. Keep the local API running at `http://127.0.0.1:8000`, unless extension mock mode is enabled.
-
-## Usage
-
-Manual analysis:
-
-- Right-click a webpage image.
-- Choose the extension analysis action.
-- Review the popup or results page.
-
-Visible-page scanning:
-
-- Open the extension popup.
-- Choose `Scan visible images`.
-- Review overlays on detected faces.
-- Use stop, rescan, clear results, emergency stop, and per-site controls from the popup.
+1. Open Chrome/Chromium extension management.
+2. Enable **Developer mode**.
+3. Choose **Load unpacked**.
+4. Select the `extension/` directory.
+5. Keep the local API running unless extension mock mode is enabled.
 
 ## Test Commands
 
@@ -94,62 +216,61 @@ node --check extension/content-script.js
 python scripts/scan_extension_safety.py extension
 ```
 
-Actual-model tests are skipped when the model artifact is unavailable. Ordinary CI does not require datasets, a GPU, or real model files.
-
-## Model Installation
-
-Models are selected by `ACTIVE_MODEL_ID` from `models/registry.json`. The default ID is `legacy-cnn-v1`.
-
-The registry supports:
-
-- local filename
-- optional download URL
-- optional SHA-256
-- provider name
-- input/output contract
-- class mapping
-- threshold profile
-- enabled status
-
-Use:
-
-```powershell
-python scripts/download_model.py --model-id legacy-cnn-v1
-python scripts/verify_model.py --model-id legacy-cnn-v1
-```
-
-The current registry has no download URL, so developers must place the model manually or set `DEEPFAKE_MODEL_PATH`.
+Actual-model tests are skipped when the model artifact is unavailable. Ordinary CI does not require the private/local model file, a dataset, or a GPU.
 
 ## Privacy Behavior
 
-The extension sends only user-selected images or eligible images from user-controlled scans. With default settings, images are sent only to the local API. Raw image bytes and face crops are not stored by the extension cache.
+With default local settings:
 
-If a remote API URL is configured, eligible images are transmitted to that remote origin.
+- only user-selected images or images included in a user-controlled scan are analyzed
+- images are sent to the local API
+- raw image bytes and face crops are not stored in the extension cache
 
-## Limitations
-
-- The current model is an experimental placeholder.
-- Real-world webpage predictions are unreliable.
-- No external holdout validation has been completed.
-- Scores are uncalibrated model outputs.
-- Haar face detection misses some valid faces and works best on frontal visible faces.
-- Manual browser testing for Phase 5 remains incomplete.
-- The local API must be running for non-mock extension use.
-
-## Roadmap
-
-Immediate next work focuses on completing manual browser testing, collecting multiple datasets, using identity-aware or source-aware splits, training a MobileNetV3Large baseline, externally evaluating replacement models, and calibrating uncertainty thresholds.
+If a remote API origin is configured, eligible images are transmitted to that configured origin instead.
 
 ## Repository Structure
 
 ```text
-api/                FastAPI service and API tests
-extension/          Manifest V3 browser extension
-face_pipeline/      Face detection, crop, and local pipeline utilities
+api/                FastAPI inference service + tests
+extension/          Chrome Manifest V3 extension
+face_pipeline/      Face detection and crop utilities
 model_runtime/      Replaceable model-provider boundary
 models/             Model registry and artifact instructions
-scripts/            Model and validation helper scripts
-reports/            Completed audit, phase, and release-prep reports
-training/           Experimental training utilities
-evaluation/         Existing-model evaluation script
+scripts/            Model download/verification and safety utilities
+evaluation/         Legacy model evaluation tooling
+training/           Experimental replacement-model training utilities
+reports/            Audit, phase, and release-preparation reports
 ```
+
+Additional documentation:
+
+- `ARCHITECTURE.md` — component boundaries and data flow
+- `MODEL_CARD.md` — model facts, evaluation, limitations, intended use
+- `SECURITY.md` — security and privacy considerations
+- `ROADMAP.md` — replacement-model and validation work
+
+## Current Limitations
+
+- the active model is an experimental baseline
+- real-world webpage predictions remain unreliable
+- no unrelated external dataset validation has been completed
+- model scores are uncalibrated
+- face detection is strongest on visible frontal faces
+- compression, screenshots, generator shift, occlusion, and non-frontal faces are not comprehensively validated
+- the local API must be running for normal non-mock extension use
+
+## Next ML Work
+
+The next model-focused phase is designed around improving evaluation quality rather than simply increasing model complexity:
+
+- collect multiple real/fake datasets
+- use identity-aware or source-aware train/validation/test splits
+- train a lighter replacement baseline such as MobileNetV3Large
+- evaluate on external holdout sources
+- test robustness under compression, noise, and resizing
+- calibrate uncertainty thresholds
+- replace the legacy provider without changing the browser/API contract
+
+## Interview Summary
+
+> I built an end-to-end human-face deepfake detection prototype consisting of a Chrome Manifest V3 extension, a local FastAPI inference service, a face-detection/cropping pipeline, and a replaceable TensorFlow model runtime. The extension can scan visible webpage images, deduplicate and queue inference requests, and render per-face results while keeping the ML model isolated behind a stable provider interface so it can be replaced after better external validation.
