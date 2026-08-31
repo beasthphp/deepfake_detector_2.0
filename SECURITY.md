@@ -1,14 +1,20 @@
 # Security
 
+This project is designed as a **local experimental MVP**. Its default security posture assumes the API and browser extension run on the same trusted machine.
+
 ## Local API
 
-The API defaults to `127.0.0.1:8000`. Do not expose it on a public interface without authentication, rate limits, logging review, and explicit deployment hardening.
+The API defaults to `127.0.0.1:8000`. Do not expose it on a public interface without authentication, rate limits, request logging, resource controls, and explicit deployment hardening.
 
 ## Image Privacy
 
-With default settings, browser-extension requests go to the local API. The extension does not store raw image bytes or face crops in its cache.
+With default settings, browser-extension requests go to the local API. The extension does not store raw image bytes or face crops in its prediction cache.
 
-If a remote API origin is configured, eligible images are transmitted to that remote origin.
+If a remote API origin is configured, eligible images are transmitted to that configured remote origin. Users should treat that as a change in the privacy boundary.
+
+## Input Handling
+
+Image uploads are decoded and validated before the face/model pipeline runs. Invalid images, detector failures, and crop failures should fail explicitly rather than being converted into a model prediction.
 
 ## Vulnerability Reporting
 
@@ -16,7 +22,7 @@ Report suspected vulnerabilities privately to the repository owner. Do not inclu
 
 ## Dependencies
 
-Report dependency vulnerabilities with package name, version, advisory link, and affected surface. Do not modify lockfiles or upgrade broad dependency groups without a focused reason.
+Report dependency vulnerabilities with package name, version, advisory link, and affected surface. Avoid broad dependency upgrades without a focused compatibility or security reason.
 
 ## Model Integrity
 
