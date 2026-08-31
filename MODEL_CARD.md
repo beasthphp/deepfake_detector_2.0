@@ -85,3 +85,10 @@ No external dataset validation has been completed. The model has not been proven
 ## Replacement Status
 
 The model is loaded through `model_runtime` and selected through `models/registry.json`. It can be replaced without changing the API or extension contract.
+
+## Related Components
+
+- `evaluation/` contains evaluation utilities and supporting artifacts.
+- `models/registry.json` defines the active model configuration.
+- `model_runtime/` owns model-specific loading, validation, preprocessing, and output interpretation.
+- `ROADMAP.md` tracks the planned replacement-model and external-evaluation work.
